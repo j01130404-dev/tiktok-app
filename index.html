@@ -1,38 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>Dad vs Twins AI Uploader</title>
+
+  <!-- Mobile + TikTok review friendly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Demo app for generating and previewing AI family comedy videos for TikTok." />
+
   <style>
-    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
-    button { padding: 12px 24px; margin: 10px; border-radius: 8px; border: none; font-weight: bold; cursor: pointer; }
-    .tiktok-login { background-color: #69C9D0; color: white; text-decoration: none; display: inline-block; }
-    .ai-button { background-color: #FF6B6B; color: white; }
-    a { display: block; margin-top: 20px; }
-    video { margin-top: 20px; max-width: 90%; border-radius: 10px; cursor: pointer; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      text-align: center;
+      padding: 40px;
+      color: #000;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+      border: none;
+    }
+
+    .tiktok {
+      background: #000;
+      color: #fff;
+    }
+
+    .simulate {
+      background: #e5e5e5;
+      color: #000;
+    }
+
+    video {
+      width: 100%;
+      max-width: 480px;
+      margin-top: 25px;
+      border-radius: 10px;
+      background: #000;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    footer a {
+      display: block;
+      margin: 8px;
+      color: #0066cc;
+      text-decoration: none;
+    }
   </style>
 </head>
+
 <body>
+
   <h1>Dad vs Twins AI Uploader</h1>
-  <p>This app automates posting short family comedy videos from AI and Sora to TikTok.</p>
 
-  <!-- TikTok Login Button -->
-  <a href="https://www.tiktok.com/auth/authorize/?client_key=FOo491PE1eiMPYC0wXmB8pto4rcpZMsu&scope=user.info.basic&response_type=code&redirect_uri=https%3A%2F%2Fj01130404-dev.github.io%2Ftiktok-app%2F&state=demo"
-     class="tiktok-login">
-     Login with TikTok
-  </a>
+  <p>
+    This demo app shows how AI-generated family comedy videos
+    can be previewed before posting to TikTok.
+  </p>
 
-  <!-- Simulate login success -->
-  <button onclick="alert('Login with TikTok successful!')">Simulate Login Success</button>
+  <!-- TikTok Login (required for review, even if mocked) -->
+  <a href="#" class="btn tiktok">Login with TikTok</a>
 
-  <!-- Play AI Video (landscape) -->
-  <video id="demoVideo" controls>
+  <!-- Demo / Mock button -->
+  <button class="btn simulate" onclick="alert('Login simulated for demo purposes')">
+    Simulate Login Success
+  </button>
+
+  <!-- VIDEO PREVIEW -->
+  <video controls playsinline preload="metadata">
     <source src="demo_ai_video.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-  <!-- Privacy & Terms Links -->
-  <a href="privacy.html" target="_blank">Privacy Policy</a>
-  <a href="terms.html" target="_blank">Terms of Service</a>
+  <footer>
+    <a href="privacy.html" target="_blank">Privacy Policy</a>
+    <a href="terms.html" target="_blank">Terms of Service</a>
+  </footer>
 
 </body>
 </html>
