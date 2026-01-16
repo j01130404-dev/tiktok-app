@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TikTok Login Callback</title>
+</head>
+<body>
+<h2>TikTok Login Callback</h2>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get('code');
+  if (code) {
+    document.body.innerHTML = "<p>Logged in successfully!</p><p>Authorization code: " + code + "</p>";
+    console.log("Authorization code:", code);
+  } else {
+    document.body.innerHTML = "<p>Something went wrong. No code received.</p>";
+  }
+</script>
+</body>
+</html>
