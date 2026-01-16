@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>TikTok Login Callback</title>
 </head>
 <body>
@@ -8,9 +9,11 @@
 <script>
   const params = new URLSearchParams(window.location.search);
   const code = params.get('code');
+
   if (code) {
     document.body.innerHTML = "<p>Logged in successfully!</p><p>Authorization code: " + code + "</p>";
     console.log("Authorization code:", code);
+    // TODO: send this code to your backend to exchange for access_token
   } else {
     document.body.innerHTML = "<p>Something went wrong. No code received.</p>";
   }
