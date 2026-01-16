@@ -2,14 +2,41 @@
 <html>
 <head>
   <title>Dad vs Twins AI Uploader</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    button { padding: 12px 24px; margin: 10px; border-radius: 8px; border: none; font-weight: bold; cursor: pointer; }
+    .tiktok-login { background-color: #69C9D0; color: white; text-decoration: none; display: inline-block; }
+    .ai-button { background-color: #FF6B6B; color: white; }
+    a { display: block; margin-top: 20px; }
+  </style>
 </head>
 <body>
   <h1>Dad vs Twins AI Uploader</h1>
   <p>This app automates posting short family comedy videos from AI and Sora to TikTok.</p>
+
   <!-- TikTok Login Button -->
-<a href="https://www.tiktok.com/auth/authorize/?client_key=FOo491PE1eiMPYC0wXmB8pto4rcpZMsu&scope=user.info.basic&response_type=code&redirect_uri=https%3A%2F%2Fj01130404-dev.github.io%2Ftiktok-app%2F&state=demo"
-   style="display:inline-block;padding:12px 24px;background-color:#69C9D0;color:white;font-weight:bold;border-radius:8px;text-decoration:none;font-family:sans-serif;">
-   Login with TikTok
-</a>
+  <a href="https://www.tiktok.com/auth/authorize/?client_key=FOo491PE1eiMPYC0wXmB8pto4rcpZMsu&scope=user.info.basic&response_type=code&redirect_uri=https%3A%2F%2Fj01130404-dev.github.io%2Ftiktok-app%2F&state=demo"
+     class="tiktok-login">
+     Login with TikTok
+  </a>
+
+  <!-- Fake login success for demo -->
+  <button onclick="alert('Login with TikTok successful!')">Simulate Login Success</button>
+
+  <!-- Generate AI Video -->
+  <button class="ai-button" onclick="generateVideo()">Generate AI Video</button>
+
+  <!-- Privacy & Terms Links -->
+  <a href="privacy.html" target="_blank">Privacy Policy</a>
+  <a href="terms.html" target="_blank">Terms of Service</a>
+
+  <!-- Script for AI Video generation -->
+  <script>
+    function generateVideo() {
+      alert('Redirecting to KIE AI to generate video...');
+      // Replace YOUR_KIE_VIDEO_URL with the KIE AI project/video link
+      window.open('https://app.kie.ai/projects/YOUR_PROJECT_ID', '_blank');
+    }
+  </script>
 </body>
 </html>
