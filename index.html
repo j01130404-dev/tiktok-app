@@ -8,19 +8,19 @@
     .tiktok-login { background-color: #69C9D0; color: white; text-decoration: none; display: inline-block; }
     .ai-button { background-color: #FF6B6B; color: white; }
     a { display: block; margin-top: 20px; }
-    /* Make video fit vertical TikTok style */
+    /* Vertical TikTok style video */
     .video-container {
-      width: 360px;  /* standard vertical width */
-      height: 640px; /* standard vertical height */
+      width: 360px;    /* vertical video width */
+      height: 640px;   /* vertical video height */
       margin: 20px auto;
-      overflow: hidden;
       border-radius: 10px;
       background-color: black;
     }
     video {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* ensures landscape video fills vertical container */
+      object-fit: cover; /* fills the container */
+      cursor: pointer;   /* indicate clickable */
     }
   </style>
 </head>
@@ -37,14 +37,13 @@
   <!-- Simulate login success -->
   <button onclick="alert('Login with TikTok successful!')">Simulate Login Success</button>
 
-  <!-- Play AI Video (vertical container) -->
+  <!-- Embedded AI Video -->
   <div class="video-container">
-    <video id="demoVideo" controls>
+    <video id="demoVideo" controls autoplay muted playsinline>
       <source src="demo_ai_video.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
-  <button class="ai-button" onclick="document.getElementById('demoVideo').play()">Play AI Video</button>
 
   <!-- Privacy & Terms Links -->
   <a href="privacy.html" target="_blank">Privacy Policy</a>
